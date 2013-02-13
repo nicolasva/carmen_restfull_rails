@@ -1,8 +1,10 @@
 = CarmenRestfullRails
 Include the gem in your Gemfile :
+
 gem 'carmen_restfull_rails', :git => "git://github.com/nicolasva/carmen_restfull_rails.git"
 
 Then, generate files and apply the migration :
+
 rails generate installs routes
 
 This project rocks and uses MIT-LICENSE.
