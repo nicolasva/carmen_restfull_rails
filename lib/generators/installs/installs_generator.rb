@@ -11,9 +11,9 @@ class InstallsGenerator < Rails::Generators::Base
     template "models/country.rb", "app/models/country.rb"
     template "models/region.rb", "app/models/region.rb"
     template "config/initializers/carmen.rb", "config/initializers/carmen.rb"
-    route_carmen_restfull = "resources  :countries, :except => [:show, :new, :edit, :create, :update, :destroy] do "
-    route_carmen_restfull += "  resources :regions, :except => [:edit, :update, :destroy, :new, :show, :index, :create]     "
-    route_carmen_restfull += "end"
+    route_carmen_restfull = "resources  :countries, :except => [:show, :new, :edit, :create, :update, :destroy] do\n"
+    route_carmen_restfull += "\t\tresources :regions, :except => [:edit, :update, :destroy, :new, :show, :index, :create]\n"
+    route_carmen_restfull += "end\n"
     route_carmen_restfull += "match 'countries/:country_name/regions' => 'regions#index'"
     route route_carmen_restfull
   end
